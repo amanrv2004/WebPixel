@@ -1,0 +1,130 @@
+.services-section {
+  padding: 10rem 0;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.services-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title-large {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-white);
+}
+
+.services-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card-modern {
+  position: relative;
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  border-radius: 32px;
+  transition: var(--transition-base);
+}
+
+.service-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  opacity: 0.15;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  transition: var(--transition-base);
+}
+
+.service-card-modern:hover .service-number {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.service-title-modern {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+}
+
+.service-desc-modern {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.service-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, oklch(0.5 0.2 260 / 0.1), transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.service-card-modern:hover .service-glow {
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .services-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 6rem 0;
+  }
+  
+  .services-header {
+    margin-bottom: 4rem;
+  }
+
+  .section-title-large {
+    font-size: 2.5rem;
+  }
+
+  .services-grid-modern {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .service-card-modern {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 4rem 0;
+  }
+
+  .section-title-large {
+    font-size: 2rem;
+  }
+}

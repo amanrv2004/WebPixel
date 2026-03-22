@@ -1,0 +1,149 @@
+.portfolio-section-luxury {
+  padding-block: var(--spacing-xl);
+  background-color: transparent;
+}
+
+.portfolio-header-luxury {
+  text-align: center;
+  margin-block-end: 8rem;
+}
+
+.portfolio-tag-luxury {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  color: var(--primary-color);
+  margin-block-end: 2rem;
+  display: block;
+}
+
+.portfolio-title-luxury {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--text-white);
+}
+
+/* Bento Grid Layout - Updated for Full Height */
+.portfolio-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 4rem;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.portfolio-item-luxury.large {
+  grid-column: span 2;
+}
+
+.portfolio-card-luxury {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  background: var(--bg-dark-soft);
+  border: 1px solid var(--glass-border);
+  transition: var(--transition-premium);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transform: translate3d(0,0,0);
+  will-change: transform, border-color;
+
+  &:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+    
+    .portfolio-visual-luxury img {
+      transform: scale(1.02);
+    }
+    
+    .project-title-luxury {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.portfolio-visual-luxury {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background: #000;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.portfolio-content-luxury {
+  padding: 3rem;
+  background: var(--bg-dark-soft);
+  border-top: 1px solid var(--glass-border);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-cat-luxury {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-block-end: 0.75rem;
+  display: block;
+}
+
+.project-title-luxury {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  transition: var(--transition-premium);
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.tech-pill-luxury {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  background: oklch(1 0 0 / 0.05);
+  border: 1px solid oklch(1 0 0 / 0.1);
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .portfolio-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .portfolio-item-luxury.large {
+    grid-column: span 1;
+  }
+
+  .portfolio-content-luxury {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  
+  .project-tech-list {
+    justify-content: flex-start;
+  }
+}

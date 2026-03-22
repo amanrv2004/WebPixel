@@ -1,0 +1,82 @@
+.cta-section-new {
+  padding: 8rem 0;
+  background-color: transparent;
+}
+
+.cta-banner-new {
+  background-color: var(--primary-color);
+  padding: 6rem 4rem;
+  border-radius: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge-circular {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-circular svg {
+  width: 100%;
+  height: 100%;
+}
+
+.badge-icon {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.rotate {
+  animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+.cta-tag-new {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.cta-title-new {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+}
+
+.btn-dark-new {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+
+.btn-dark-new:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .cta-title-new {
+    font-size: 2.5rem;
+  }
+}

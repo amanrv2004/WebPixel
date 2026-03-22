@@ -1,0 +1,134 @@
+.hero-luxury {
+  position: relative;
+  min-block-size: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  background-color: transparent;
+}
+
+.hero-content-luxury {
+  max-inline-size: 1100px;
+  margin-inline: auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  background: oklch(1 0 0 / 0.03);
+  border: 1px solid oklch(1 0 0 / 0.08);
+  border-radius: var(--radius-pill);
+  margin-block-end: 3rem;
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #10b981;
+    animation: pulse 2s infinite;
+    transform: translate3d(0,0,0);
+  }
+
+  .badge-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+}
+
+.hero-title-luxury {
+  font-size: clamp(3.5rem, 12vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  margin-block-end: 3rem;
+  color: var(--text-white);
+}
+
+.hero-subtitle-luxury {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--text-muted);
+  margin-block-end: 4rem;
+  max-inline-size: 800px;
+  margin-inline: auto;
+  line-height: 1.3;
+  text-wrap: balance;
+  font-weight: 500;
+}
+
+.hero-btns-luxury {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Background Visuals Removed - Now Global */
+.hero-visuals {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 992px) {
+  .hero-title-luxury {
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin-block-end: 2rem;
+  }
+  
+  .hero-subtitle-luxury {
+    font-size: 1.25rem;
+    margin-block-end: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-luxury {
+    padding-block: 8rem 4rem;
+    min-block-size: auto;
+  }
+
+  .hero-title-luxury {
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .hero-top-badge {
+    margin-block-end: 2rem;
+  }
+
+  .hero-btns-luxury {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-luxury {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle-luxury {
+    font-size: 1.1rem;
+    padding-inline: 1rem;
+  }
+}

@@ -1,0 +1,73 @@
+.service-card-modern-animated {
+  padding: 3rem 2rem;
+  border-radius: 32px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  will-change: transform; /* Performance optimization */
+}
+
+.service-card-modern-animated:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.service-card-content {
+  position: relative;
+  z-index: 10;
+}
+
+.service-icon-wrapper-animated {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-gradient);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+}
+
+.service-icon-animated {
+  color: white;
+}
+
+.service-title-animated {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-white);
+}
+
+.service-description-animated {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Performant CSS Shine Effect */
+.service-card-shine {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--mouse-x, 0) var(--mouse-y, 0), 
+    oklch(1 0 0 / 0.05), 
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card-modern-animated:hover .service-card-shine {
+  opacity: 1;
+}
