@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Briefcase, Layout, User, Send } from 'lucide-react';
+import { Home, Briefcase, Layout, User, Send, DollarSign } from 'lucide-react';
 import './MobileNavbar.css';
 
 const MobileNavbar = () => {
@@ -18,6 +18,10 @@ const MobileNavbar = () => {
         <NavLink to="/portfolio" className={({ isActive }) => isActive ? 'mobile-nav-item active' : 'mobile-nav-item'}>
           <Briefcase size={20} />
           <span>Work</span>
+        </NavLink>
+        <NavLink to="/pricing" className={({ isActive }) => isActive ? 'mobile-nav-item active' : 'mobile-nav-item'}>
+           <DollarSign size={20} />
+          <span>Pricing</span>
         </NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? 'mobile-nav-item active' : 'mobile-nav-item'}>
           <User size={20} />
