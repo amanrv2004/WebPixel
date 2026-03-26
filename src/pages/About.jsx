@@ -32,21 +32,15 @@ const About = () => {
       bio: "Specializing in interactive user interfaces and robust Python-based backends." 
     },
     { 
-      name: "Ashutosh Singh", 
-      role: "Python and Full Stack Developer", 
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400", 
-      bio: "Building scalable web solutions with a focus on data-driven Python architectures." 
-    },
-    { 
       name: "Ajay Kumar", 
       role: "Digital Marketer and DevOps Engineer", 
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400", 
+      image: "/Ajay.jpeg", 
       bio: "Bridging the gap between high-performance infrastructure and strategic digital growth." 
     },
     { 
       name: "Vikram Kumar", 
       role: "QA ( Tester ) and SEO", 
-      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&q=80&w=400", 
+      image: "/vikram.jpeg", 
       bio: "Ensuring flawless quality standards and peak search engine visibility." 
     }
   ];
